@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Istanbul Commerce University Exam Cover Page (MÜDEK)
+%% -------------------
+%% $Author: Tapir Lab.$,
+%% $Date: May 14th, 2022$,
+%% $Revision: 1.0$
+%% $Copyright: Tapir Lab.$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 11pt]{article}
+\setlength{\oddsidemargin}{0pt} 
+\setlength{\evensidemargin}{0pt}
+\usepackage[top = 0.98in, right = 0.98in, left = 0.98in, bottom = 0.98in]{geometry}
+
+\usepackage[turkish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{bm} % To type bold math
+
+\usepackage{graphicx} % to include figures
+\graphicspath{{./figures/}}
+
+\usepackage{booktabs} % Required for tables
+\usepackage{array} % extends the options for column formats
+\usepackage{multicol} % to use multicolumns of tables
+
+
+% Column Types
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}m{#1}}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}m{#1}}
+
+\begin{document}
+	\thispagestyle{empty}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Üniversite logosu ve bölüm ismi
+	\begin{minipage}[c]{\textwidth}
+		\begin{minipage}[c]{0.3\textwidth}
+			\centering
+			\shorthandoff{=} % trick for turkish and graphics inconsistency
+			\includegraphics[width=\textwidth]{logo.png}
+			\shorthandon{=} % trick for turkish and graphics inconsistency
+		\end{minipage}%
+		\begin{minipage}[c]{0.7\textwidth}
+			\centering
+			{\LARGE \textbf{İstanbul Ticaret Üniversitesi}}\\[1em]
+			{\Large \textbf{Bilgisayar Mühendisliği Bölümü}}
+		\end{minipage}
+	\end{minipage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Ders kodu, ders adı ve sınav türü
+	\begin{center}
+		\Large
+		\textbf{BIL$\bm{452}$--Yapay Zeka (Final)}
+	\end{center}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Öğrenci numarası ve ismi
+	\begin{table}[!ht]
+		\renewcommand{\arraystretch}{2}
+		\centering
+		\begin{tabular}{@{}|L{0.25\linewidth} C{0.05\linewidth} p{0.60\linewidth}|@{}}
+			\hline
+			\textbf{Öğrenci Numara}& : & ~ \\ \hline
+			\textbf{Öğrenci İsim}  & : & ~ \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Akademik yıl, dönem, sınav tarihi, sınav süresi, öğretim üyesi bilgileri
+	% Sınav PÖÇ bilgileri ve notlandırması
+	\begin{table}[!ht]
+		\renewcommand{\arraystretch}{1.5}
+		\centering
+		\begin{tabular}{@{}|>{\bfseries}L{0.175\linewidth}>{\bfseries}C{0.00\linewidth}>{\bfseries}L{0.32\linewidth}|@{}}
+			\hline
+			Akademik Yıl  & : & $\bm{2017}$--$\bm{2018}$                     \\ \hline
+			Dönem         & : & \textbf{Bahar}                     \\ \hline
+			Tarih         & : & $\bm{28.05.2018}$                       \\ \hline
+			Süre          & : & $\bm{75}$ \textbf{Dakika}               \\ \hline
+			Öğretim Üyesi & : & \textbf{John Doe}\\ \hline
+		\end{tabular}
+		\hfill
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{|>{\bfseries}C{0.08\linewidth}|>{\bfseries}C{0.09\linewidth}|>{\bfseries}C{0.07\linewidth}|>{\bfseries}C{0.04\linewidth}|}
+			\hline
+			Soru   & PÖÇ      & Ağırlık & Not \\ \hline
+			$\bm{1}$ & $\bm{1}$.a, 1.b & $\bm{30}$    & ~   \\ \hline
+			$\bm{2}$ & $\bm{2}$.a, 2.b & $\bm{15}$    & ~   \\ \hline
+			$\bm{3}$ & $\bm{2}$.b      & $\bm{25}$    & ~   \\ \hline
+			$\bm{4}$ & $\bm{2}$.a, 2.b & $\bm{30}$    & ~   \\ \hline
+			Toplam & ~        & 100     & ~   \\ \hline
+		\end{tabular}
+		\vspace{-0.5cm}
+		\begin{flushright}
+			\textbf{PÖÇ: Program Öğrenim Çıktısı}
+		\end{flushright}
+	\end{table}
+	\vspace{-1cm}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Sınav Kuralları
+	\begin{center}
+		\large
+		\textbf{Sınav Kuralları}
+	\end{center}
+	\begin{itemize}
+		\setlength{\itemsep}{0pt}
+		\setlength{\parskip}{1pt}
+		\item Sınava başlamadan önce isim ve numaranızı yazınız.
+		\item \textbf{Tüm soruları cevaplayınız.} 
+		\item Cevaplarınızı sınav kağıdınızda sorulardan sonra boş bırakılan yerlere yazınız. Yazınız temiz ve okunabilir olmalıdır. Cevabınızın anlamsız kısımları değerlendirilmeyecektir.
+		\item Sınav esnasında sıranızda sadece sınav kağıdınız bulunmalıdır. Sıranız yazısız ve diğer tüm materyaller erişilemez konumda olmalıdır. Aşağıda listede verilen öğelerin bulundurulması yasaktır ve kopya çekme girişimi olarak değerlendirilir
+		\begin{itemize}
+			\setlength{\itemsep}{0pt}
+			\setlength{\parskip}{1pt}
+			\item[o] Sözlük
+			\item[o] Hesap Makinesi
+			\item[o] Cep Telefonu
+			\item[o] Ders Notları/Sunumlar/Kişisel Notlar
+			\item[o] Kitaplar
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{table}[hb!]
+		\centering
+		\begin{tabular}{@{}C{0.03\linewidth}L{0.95\linewidth}@{}}
+			\toprule
+			\multicolumn{2}{l}{Program Öğrenim Çıktıları} \\
+			\midrule
+			$1$.a. & Matematik, fen bilimleri ve ilgili mühendislik disiplinine özgü konularda yeterli bilgi birikimi \\
+			$1$.b. & Bu alanlardaki kuramsal ve uygulamalı bilgileri, karmaşık mühendislik problemlerinde kullanabilme becerisi. \\
+			\midrule
+			$2$.a. & Karmaşık mühendislik problemlerini saptama, tanımlama, formüle etme ve çözme becerisi \\
+			$2$.b. & Bu amaçla uygun analiz ve modelleme yöntemlerini seçme ve uygulama becerisi. \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+\end{document}
