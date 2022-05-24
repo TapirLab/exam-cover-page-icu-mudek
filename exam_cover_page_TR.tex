@@ -3,7 +3,7 @@
 %% -------------------
 %% $Author: Tapir Lab.$,
 %% $Date: May 14th, 2022$,
-%% $Revision: 1.0$
+%% $Revision: 1.1$
 %% $Copyright: Tapir Lab.$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -12,7 +12,7 @@
 \setlength{\evensidemargin}{0pt}
 \usepackage[top = 0.98in, right = 0.98in, left = 0.98in, bottom = 0.98in]{geometry}
 
-\usepackage[turkish]{babel}
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -32,79 +32,86 @@
 \newcolumntype{C}[1]{>{\PreserveBackslash\centering}m{#1}}
 
 \begin{document}
+	\boldmath
 	\thispagestyle{empty}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% Üniversite logosu ve bölüm ismi
+	% University Logo - Department Name
 	\begin{minipage}[c]{\textwidth}
 		\begin{minipage}[c]{0.3\textwidth}
 			\centering
-			\shorthandoff{=} % trick for turkish and graphics inconsistency
 			\includegraphics[width=\textwidth]{logo.png}
-			\shorthandon{=} % trick for turkish and graphics inconsistency
 		\end{minipage}%
 		\begin{minipage}[c]{0.7\textwidth}
 			\centering
-			{\LARGE \textbf{İstanbul Ticaret Üniversitesi}}\\[1em]
-			{\Large \textbf{Bilgisayar Mühendisliği Bölümü}}
+			{\LARGE \textbf{İstanbul Ticaret Üniversites}}\\[1em]
+			{\Large \textbf{Elektrik--Elektronik Mühendisliği Bölümü}}
 		\end{minipage}
 	\end{minipage}
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% Ders kodu, ders adı ve sınav türü
+	%%%%%%%%%%%%%%%%%%%%%%%%%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Course code, name and type of exam
 	\begin{center}
 		\Large
-		\textbf{BIL$\bm{452}$--Yapay Zeka (Final)}
+		\textbf{EEE$405$--Digital Communication Systems (Final)}
 	\end{center}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% Öğrenci numarası ve ismi
+	% Student ID and name
 	\begin{table}[!ht]
 		\renewcommand{\arraystretch}{2}
 		\centering
 		\begin{tabular}{@{}|L{0.25\linewidth} C{0.05\linewidth} p{0.60\linewidth}|@{}}
 			\hline
-			\textbf{Öğrenci Numara}& : & ~ \\ \hline
-			\textbf{Öğrenci İsim}  & : & ~ \\ \hline
+			\textbf{Öğrenci No}& : & ~ \\ \hline
+			\textbf{Ad Soyad}  & : & ~ \\ \hline
 		\end{tabular}
 	\end{table}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% Akademik yıl, dönem, sınav tarihi, sınav süresi, öğretim üyesi bilgileri
-	% Sınav PÖÇ bilgileri ve notlandırması
+	% Academic year, term, exam date, duration and academic personell
+	% Exam "PÖÇ" information and grading table
 	\begin{table}[!ht]
-		\renewcommand{\arraystretch}{1.5}
+		\renewcommand{\arraystretch}{1.1}
 		\centering
-		\begin{tabular}{@{}|>{\bfseries}L{0.175\linewidth}>{\bfseries}C{0.00\linewidth}>{\bfseries}L{0.32\linewidth}|@{}}
-			\hline
-			Akademik Yıl  & : & $\bm{2017}$--$\bm{2018}$                     \\ \hline
-			Dönem         & : & \textbf{Bahar}                     \\ \hline
-			Tarih         & : & $\bm{28.05.2018}$                       \\ \hline
-			Süre          & : & $\bm{75}$ \textbf{Dakika}               \\ \hline
-			Öğretim Üyesi & : & \textbf{John Doe}\\ \hline
+		\begin{tabular}{@{}>{\bfseries}L{0.18\linewidth}>{\bfseries}C{0.00\linewidth}>{\bfseries}L{0.25\linewidth}@{}}
+			\toprule
+			Akademik Yıl  & : & $2021$--$2022$                  \\ 
+			\midrule
+			Dönem         & : & \textbf{Bahar}                             \\ 
+			\midrule
+			Tarih         & : & $24$ Mayıs $2022$                           \\ 
+			\midrule
+			Süre          & : & $70$ \textbf{dk.}                \\
+			\midrule
+			Eğitmen & : & John Doe \\
+			\bottomrule
 		\end{tabular}
 		\hfill
 		\renewcommand{\arraystretch}{1.1}
-		\begin{tabular}{|>{\bfseries}C{0.08\linewidth}|>{\bfseries}C{0.09\linewidth}|>{\bfseries}C{0.07\linewidth}|>{\bfseries}C{0.04\linewidth}|}
-			\hline
-			Soru   & PÖÇ      & Ağırlık & Not \\ \hline
-			$\bm{1}$ & $\bm{1}$.a, 1.b & $\bm{30}$    & ~   \\ \hline
-			$\bm{2}$ & $\bm{2}$.a, 2.b & $\bm{15}$    & ~   \\ \hline
-			$\bm{3}$ & $\bm{2}$.b      & $\bm{25}$    & ~   \\ \hline
-			$\bm{4}$ & $\bm{2}$.a, 2.b & $\bm{30}$    & ~   \\ \hline
-			Toplam & ~        & 100     & ~   \\ \hline
+		\begin{tabular}{>{\bfseries}C{0.1\linewidth}>{\bfseries}C{0.1\linewidth}>{\bfseries}C{0.1\linewidth}>{\bfseries}C{0.06\linewidth}}
+			Soru & PÖÇ      & Ağırlık & Not \\
+			\toprule
+			$1$ & $1$.a, $1$.b & $35$    & ~   \\
+			\midrule
+			$2$ & $2$.a, $2$.b & $35$    & ~   \\
+			\midrule
+			$3$ & $1$.a, $2$.b & $30$    & ~   \\
+			\midrule
+			Toplam    & ~              		  & $100$   & ~   \\
+			\bottomrule
 		\end{tabular}
-		\vspace{-0.5cm}
+		\vspace{-0.3cm}
 		\begin{flushright}
-			\textbf{PÖÇ: Program Öğrenim Çıktısı}
+			\textbf{PÖÇ: Program Öğrenim Çıktıları}
 		\end{flushright}
 	\end{table}
 	\vspace{-1cm}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% Sınav Kuralları
+	% Instructions
 	\begin{center}
-		\large
-		\textbf{Sınav Kuralları}
+	\large
+	\textbf{Sınav Kuralları}
 	\end{center}
 	\begin{itemize}
 		\setlength{\itemsep}{0pt}
@@ -130,12 +137,13 @@
 			\toprule
 			\multicolumn{2}{l}{Program Öğrenim Çıktıları} \\
 			\midrule
-			$1$.a. & Matematik, fen bilimleri ve ilgili mühendislik disiplinine özgü konularda yeterli bilgi birikimi \\
-			$1$.b. & Bu alanlardaki kuramsal ve uygulamalı bilgileri, karmaşık mühendislik problemlerinde kullanabilme becerisi. \\
+			$1$.a. & Matematik, fen bilimleri ve Elektrik-Elektronik Mühendisliğine özgü konularda yeterli bilgi birikimi. \\
+			$1$.b. & Bu alanlardaki kuramsal ve uygulamalı bilgileri, karmaşık Elektrik-Elektronik Mühendisliği problemlerini kullanabilme becerisi. \\
 			\midrule
-			$2$.a. & Karmaşık mühendislik problemlerini saptama, tanımlama, formüle etme ve çözme becerisi \\
-			$2$.b. & Bu amaçla uygun analiz ve modelleme yöntemlerini seçme ve uygulama becerisi. \\
+			$2$.a. & Karmaşık Elektrik-Elektronik Mühendisliği problemlerini saptama, tanımlama, formüle etme ve çözme becerisi \\
+			$2$.b. & Bu amaçla uygun analiz ve modelleme yöntemlerini seçme ve uygulama becerisi \\
 			\bottomrule
 		\end{tabular}
 	\end{table}
+	\unboldmath
 \end{document}
